@@ -1,3 +1,5 @@
+alert("asdasdsa")
+
 document.addEventListener('DOMContentLoaded', function () {
 	const PAGE_URL = window.location.href;
 
@@ -22,4 +24,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			correctLevel: QRCode.CorrectLevel.H
 		});
 	}
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+	const socialItems = document.querySelectorAll(".social-item");
+
+	socialItems.forEach(item => {
+		const hrefAttr = item.getAttribute("href");
+
+		if (!hrefAttr || hrefAttr === "" || hrefAttr === "#") {
+			item.style.display = "none";
+		}
+	});
 });
