@@ -1,5 +1,3 @@
-alert("asdasdsa")
-
 document.addEventListener('DOMContentLoaded', function () {
 	const PAGE_URL = window.location.href;
 
