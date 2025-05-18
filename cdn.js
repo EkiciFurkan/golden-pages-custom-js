@@ -35,3 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+	const PAGE_URL = window.location.href;
+	const companyWebsite = document.getElementById("company-website");
+
+	if (companyWebsite) {
+		const linkText = companyWebsite.textContent.trim();
+
+		if (linkText === "") {
+			companyWebsite.href = PAGE_URL;
+			companyWebsite.textContent = PAGE_URL;
+		}
+	}
+});
